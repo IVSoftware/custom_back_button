@@ -27,7 +27,7 @@ namespace custom_back_button
         public ICommand BackButtonPressedCommand { get; private set; }
         private void OnBackButtonPressed(object o)
         {
-            App.Current.MainPage.DisplayAlert("Message from button", "It worked", "OK");
+            ((App)Application.Current).OnBackButtonPressed(o, EventArgs.Empty);
         }
     }
 }
