@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="custom_back_button.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Background">#88aaaa</Color>
+            <Style x:Key="NavButton"
+                   TargetType="ImageButton">
+                <Setter Property="Source"
+                        Value="back.png" />
+                <Setter Property="HorizontalOptions"
+                        Value="EndAndExpand" />
+                <Setter Property="Command"
+                        Value="{Binding BackButtonPressedCommand}" />
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource Background}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
